@@ -695,3 +695,4 @@ get('https://hacker-news.firebaseio.com/v0/topstories.json').then( function(stor
 });
 ```
 
+#### 在本文中大量引用了theJian 的文章[链接]，theJian文章在我的学习中提供了很大的帮助，在此深表感谢！
