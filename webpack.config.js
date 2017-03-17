@@ -17,6 +17,20 @@ module.exports = {
         presets: ['es2015','react']
       }
     },
+    {
+    	test:/\.(png|jpg|gif)$/,
+    	loader: 'url-loader?limit=8192'
+    },
+   
+
+    {
+ 		test: /\.css$/,
+ 		loader: 'style-loader!css-loader?modules'
+	  }
+    // {
+    //   test: /\.style$/,
+    //   loader: 'style!css'
+    // }
     ]
   }
 
