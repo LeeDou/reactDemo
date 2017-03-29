@@ -22,7 +22,7 @@
 
    webpack 用一个名为webpack.config.js 的配置文件，现在在你的项目的根目录下创建该文件。
 
-  [文件目录][01.jpg]
+  [文件目录][https://github.com/LeeDou/reactDemo/blob/master/react%E5%AD%A6%E4%B9%A0/01.jpg]
 
   ```
   var path = require('path');
