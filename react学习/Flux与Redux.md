@@ -10,7 +10,7 @@ React 能够根据state的变化来更新view，一般来说引起state变化的
   flux 是一种应用架构，或者说是一种思想，它跟react本身没什么关系，它可以用在react上，也可以用在别
 框架上。前面说到flux在React中主要用来统一管理引起state变化的情况。Flux维护着一个或者多个store的变量，就像MVC里面的model，里面存放着应用用到的所有数据，当一个事件触发时，flux对事件进行处理，对store进行更新。这里的controller view可以有多个也可以不是根组件，但是这样数据流维护起来就比较麻烦。
 flux思维图：
-![]（flux.png）
+ ![](flux.png)
 
   flux主要包括四个部分，Dispatcher、store、view、action，其中dispatcher是flux的核心枢纽，它相于一个事件分发器，将那些分散在各个组件里面的逻辑代码收集起来，统一在dispatcher中进行处理。完整的流程是这样的：用户通过与view交互或外部产生一个action，dispacther接收到action并执行那些已经注册的回调，向所有store分发action。通过注册回调，store响应那些与他们所保存的状态有关的action。然后store会触发一个change事件，来提醒controller-views数据已经发生改变。controller-views监听这些事件，并重新重store中获取数据。这些controller-views调用他们自己的setState方法,重新渲染自身以及组件树上所有的后代组件。使用flux有个好处就是我们只需要用action对象向dispacther描述当前事件就可以执行对应的逻辑，因为dispacther是所有action的处理中心，即使没有对应的事件发生，我们也可以伪造一个出来，非常利于测试。
 
